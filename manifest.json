@@ -3,10 +3,15 @@
   "name": "公式计算器",
   "description": "计算输入的算术表达式并复制结果",
   "keyword": "calc",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "QuickLauncher",
   "runtime": "ruby",
   "entry": "main.rb",
   "input": "arguments",
-  "acceptsSelectedText": true
+  "acceptsSelectedText": true,
+  "passiveTrigger": {
+    "type": "characterSet",
+    "allowedCharacters": "0123456789.eE+-*/%^() ×÷",
+    "requiredCharacterGroups": ["0123456789", "+-*/%^×÷"]
+  }
 }

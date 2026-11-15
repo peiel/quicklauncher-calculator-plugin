@@ -37,6 +37,13 @@ class CalculatorTest < Minitest::Test
     assert_equal 'error', JSON.parse(out)['action']
   end
 
+  def test_passive_expression_uses_same_json_protocol
+    file = File.expand_path('../main.rb', __dir__)
+    out, status = Open3.capture2('/usr/bin/ruby', file, stdin_data: JSON.generate(version: 1, arguments: '1+1'))
+    assert status.success?
+    assert_equal({ 'version' => 1, 'action' => 'copyAndShow', 'text' => '2' }, JSON.parse(out))
+  end
+
   def test_result_length_limit_matches_host
     assert_equal 200, calculate('10^100 * 10^99').length
     assert_equal 200, calculate('-10^100 * 10^98').length
