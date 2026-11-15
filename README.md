@@ -4,7 +4,7 @@
 
 也可以先在其他应用中选中公式，再打开 QuickLauncher，输入 `calc` 并选择插件执行。QuickLauncher 在执行时尝试读取先前应用的选中文字并传给插件；此功能需要在 macOS 中按需授予 QuickLauncher 辅助功能权限，且目标应用需支持通过辅助功能提供选区。无法读取时，可将公式手动粘贴到 `calc ` 后。插件自己不会读取剪贴板或其他应用，成功结果由 QuickLauncher 显示并写入剪贴板。插件不会联网、执行公式中的代码或运行 shell 命令。
 
-需要支持 `input: "arguments"` 和按需读取选区的 QuickLauncher 版本，以及可用的 Ruby 运行环境。通过应用的“脚本与插件 → 发现插件”搜索 `peiel/quicklauncher-calculator-plugin`，审查后安装并启用；也可以从插件展示站一键打开应用进行审核。
+需要支持 `input: "arguments"` 和按需读取选区的 QuickLauncher 版本，以及可用的 Ruby 运行环境。通过应用的“插件 → 发现插件”搜索 `peiel/quicklauncher-calculator-plugin`，审查后安装并启用；也可以从插件展示站一键打开应用进行审核。
 
 ## 协议和测试
 
