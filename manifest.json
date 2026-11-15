@@ -1,0 +1,12 @@
+{
+  "id": "com.quicklauncher.github.calculator",
+  "name": "公式计算器",
+  "description": "计算输入的算术表达式并复制结果",
+  "keyword": "calc",
+  "version": "1.0.0",
+  "author": "QuickLauncher",
+  "runtime": "ruby",
+  "entry": "main.rb",
+  "input": "arguments",
+  "acceptsSelectedText": true
+}
